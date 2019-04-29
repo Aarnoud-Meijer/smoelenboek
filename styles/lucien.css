@@ -1,0 +1,85 @@
+
+
+
+/* CSS is how you can add style to your website, such as colors, fonts, and positioning of your
+   HTML content. To learn how to do something, just try searching Google for questions like
+   "how to change link color." */
+
+/*	reset	*/
+*{margin: 0;padding: 0;text-decoration:none}
+a, a:focus, object, img{outline:none;border:0}
+
+/*	usual suspects	*/
+.none		{display:none;height:0;}
+.clear		{clear:both}
+.left		{float:left}
+.right		{float:right}
+.aligncenter{text-align:center}
+.alignleft	{text-align:left}
+.alignright	{text-align:right}
+
+/*	default	*/
+body{text-align:center;background-color:#48D1CC; font-family:'Roboto', sans-serif;}
+header,menu,article,aside,footer,section,details,figcaption,figure,hgroup{display: block}
+
+
+body {
+  margin: 25px;
+  color: black;
+  font-family: Tahoma;
+  background-color: orange;
+}
+
+/* header{
+  width:100%;
+  background-color: #aaa; 
+}*/
+
+.lucien {
+  width: 250px;
+  transform: /*translate(250px)*/ rotate(90deg);
+  border-radius: 66px;
+  box-shadow: -10px -10px 5px white;
+}
+
+h1 {
+  text-shadow: 3px 2px white;
+  font-family: tahoma;
+  
+}
+
+p {
+  font-style: italic;
+  font-size: 17px;
+  
+}
+
+.home {
+  text-align: left;
+}
+
+/* backbutton */
+
+
+ul {
+  list-style: none;
+}
+
+a:link {
+  color: black;
+  font-size: 18px;
+  text-decoration: none;
+}
+
+a:visited {
+  color: black;
+}
+
+a:hover {
+  color: white;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+
+

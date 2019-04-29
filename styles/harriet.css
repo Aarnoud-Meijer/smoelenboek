@@ -1,0 +1,64 @@
+
+/*	reset	*/
+*{margin: 0;padding: 0;text-decoration:none}
+a, a:focus, object, img{outline:none;border:0}
+
+/*	usual suspects*/
+.none		{display:none;height:0;}
+.clear		{clear:both}
+.left		{float:left}
+.right		{float:right}
+.aligncenter{text-align:center}
+.alignleft	{text-align:left}
+.alignright	{text-align:right}
+
+
+
+body {
+margin: 20px;
+text-align:center;
+background-color:#B2D732;
+font-family:'Roboto', sans-serif;
+}
+
+header,menu,article,aside,section,details,figcaption,figure,hgroup{display: block;} 
+
+.container {
+  margin: 20px;
+  padding: 20px;
+  }
+
+.home {
+  text-align: left;
+}
+ul{
+  list-style: none;
+}
+a:link {
+  font-weight: bold;
+}
+a:hover {
+  color: blue;
+}
+
+
+.header {
+  color: #347B98;
+}
+
+.harriet {
+  width: 200px;
+  border-radius: 5px;
+  transform: translate(0,50px) rotate(90deg);
+  }
+
+
+.content {
+  color: #347B98;
+  text-align:center;
+  list-style: none;
+}
+
+.me {
+  color: #9A0794;
+}

@@ -1,0 +1,42 @@
+
+
+
+img {
+  width:150px
+  transform: translate(250px) rotate(90deg)
+  border-radius:10px;
+  float:right;
+  margin: 25px 25px;
+	box-shadow: 5px 5px 3px rgba(0, 0, 0, 0.5),
+				1px 1px 1px rgba(0, 0, 0, 0.75),
+				0 0 2px rgba(0, 0, 0, 0.5),
+				3px 2px 2px rgba(200, 255, 128, 0.25) inset;
+
+}
+
+article#bio {
+  float:left;
+  Width:500px;
+  margin: 50px 25px;
+  text-align: left;
+  
+}
+
+div#photo {
+ background-img: url("/img/aarnoud_small.jpg");
+ width:250px;
+  
+}
+
+#back{
+  float:right;
+  padding:10px;
+  display:inline-block;
+  border-radius:10px;
+  margin: 25px 25px;
+	box-shadow: 5px 5px 3px rgba(0, 0, 0, 0.5),
+				1px 1px 1px rgba(0, 0, 0, 0.75),
+				0 0 2px rgba(0, 0, 0, 0.5),
+				3px 2px 2px rgba(200, 255, 128, 0.25) inset;
+  
+}
