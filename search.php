@@ -22,7 +22,7 @@
 		"sex"	=> "female",
 		),
 		array(
-		"fisrt" => "Harriet",
+		"first" => "Harriet",
 		"last" => "Kiyai",
 		"sex"	=> "female",
 		),
@@ -32,7 +32,7 @@
 		"sex"	=> "male",
 		),
 		array(
-		"fisrt" => "Aarnoud",
+		"first" => "Aarnoud",
 		"last" => "Meijer",
 		"sex"	=> "male",
 		)
@@ -112,18 +112,6 @@
 			}
 		echo"</div>\n";
 	}
-
-/*
-array(
-		"first"	=> "Lana",
-		"last"	=> "Sijsling",
-		"sex"	=> "female",
-*/
-
-//var_dump ($user);
-foreach($user as $x){
-	//var_dump($x);
-}
 ?>
 		</article>
 
