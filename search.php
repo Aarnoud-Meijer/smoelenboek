@@ -20,21 +20,25 @@
 		"first"	=> "Lana",
 		"last"	=> "Sijsling",
 		"sex"	=> "female",
+		'link'	=> "lana.html",
 		),
 		array(
 		"first" => "Harriet",
 		"last" => "Kiyai",
 		"sex"	=> "female",
+		'link'	=> "harriet.html",
 		),
 		array(
 		"first" => "Lucien",
 		"last" => "Koot",
 		"sex"	=> "male",
+		'link'	=> "lucien.html",
 		),
 		array(
 		"first" => "Aarnoud",
 		"last" => "Meijer",
 		"sex"	=> "male",
+		'link'	=> "aarnoud.html",
 		)
 	);
 ?>
@@ -79,6 +83,20 @@
 			background-color:#eee;
 		}
 
+		article a{
+			color:#000;
+			font-weight:bold;
+			text-decoration:none;
+		}
+
+		#checkboxmen:checked ~ * .male {
+			color: blue;
+		}
+
+		#checkboxwomen:checked ~ * .female {
+			color: red;
+		}
+
 		</style>
 	</head>
 	<body>
@@ -86,6 +104,9 @@
 		  <h1>Zoeken op Smoelenboek</h1>
 		  <a href="/index.html" id="back">terug</a>
 		</header>
+
+		<input type="checkbox" id="checkboxmen" /> Men
+		<input type="checkbox" id="checkboxwomen" /> women
 
 		<ul>
 <?php foreach($az as $x){
@@ -105,7 +126,9 @@
 				//  substr ( string $string , int $start [, int $length ] ) : string
 				if(substr($y['first'], 0, 1) == $x || substr($y['last'], 0, 1) == $x){
 					echo "\n\t<div>\n";
+					echo "<a href='". $y['link'] . "' class='".$y['sex']."'>";
 					echo "\n\t\t".$y['first']." ".$y['last']."<br/>\n";
+					echo "</a>";
 					echo "</div>\n";
 				}
 			//var_dump($x);
