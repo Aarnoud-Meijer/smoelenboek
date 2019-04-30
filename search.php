@@ -1,14 +1,8 @@
 <?php
-//	echo "search page";
 
 	// create A-Z array
 	$az = range('A', 'Z');
 
-/*
-	foreach($arr AS $item){
-		$output .= $prefix .$item.$suffix;    
-	}
-*/
 //	$prefixed_array = preg_filter('/^/', '#', range('A', 'Z'));			// #A, #B, #C, #D, etc
 	$cssIdrange =  implode (", ", preg_filter('/^/', '#', range('A', 'Z')));
 
@@ -89,12 +83,19 @@
 			text-decoration:none;
 		}
 
+		.male, .female{
+			padding:5px;
+			opacity: .5;
+		}
+
 		#checkboxmen:checked ~ * .male {
 			color: blue;
+			opacity: 1;
 		}
 
 		#checkboxwomen:checked ~ * .female {
 			color: red;
+			opacity: 1;
 		}
 
 		</style>
@@ -137,7 +138,5 @@
 	}
 ?>
 		</article>
-
-
 	</body>
 </html>
