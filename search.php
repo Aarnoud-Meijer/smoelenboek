@@ -9,33 +9,34 @@
 		$output .= $prefix .$item.$suffix;    
 	}
 */
-//	$prefixed_array = preg_filter('/^/', '#', range('A', 'Z'));
-	$cssIdrange =  implode (", ", preg_filter('/^/', '#', range('A', 'Z')));	// #A, #B, #C, #D, etc
+//	$prefixed_array = preg_filter('/^/', '#', range('A', 'Z'));			// #A, #B, #C, #D, etc
+	$cssIdrange =  implode (", ", preg_filter('/^/', '#', range('A', 'Z')));
 
 	$str = implode (", ", $az);
 
 	// create user list
 	$user = array(
-		[0] => array(
-		"first" => "Lana",
-		"last" => "Sijsling"
+		array(
+		"first"	=> "Lana",
+		"last"	=> "Sijsling",
+		"sex"	=> "female",
 		),
-		[1] => array(
+		array(
 		"fisrt" => "Harriet",
 		"last" => "Kiyai",
+		"sex"	=> "female",
 		),
-		[2] => array(
+		array(
 		"first" => "Lucien",
 		"last" => "Koot",
+		"sex"	=> "male",
 		),
-		[3] => array(
+		array(
 		"fisrt" => "Aarnoud",
 		"last" => "Meijer",
+		"sex"	=> "male",
 		)
 	);
-
-// var_dump ($user);
-
 ?>
 <!DOCTYPE html>
 <html>
@@ -98,12 +99,31 @@
 	// loop
 	foreach($az as $x){
 		//var_dump $x;
-		echo "\t\t<div id='". $x . "'>".$x."</div>\n";
+		echo "\t\t<div id='". $x . "'>".$x;
+			foreach($user as $y){
+				//  substr ( string $string , int $start [, int $length ] ) : string
+				if(substr($y['first'], 0, 1) == $x || substr($y['last'], 0, 1) == $x){
+					echo "\n\t\t".$y['first']." ".$y['last']."<br/>\n";
+				}
+			//var_dump($x);
+			}
+		echo"</div>\n";
 	}
+
+/*
+array(
+		"first"	=> "Lana",
+		"last"	=> "Sijsling",
+		"sex"	=> "female",
+*/
+
+//var_dump ($user);
+foreach($user as $x){
+	//var_dump($x);
+}
 ?>
 		</article>
 
 
 	</body>
 </html>
-
