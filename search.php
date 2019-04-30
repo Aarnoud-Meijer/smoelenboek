@@ -49,7 +49,7 @@
 		<style>
 			<?=$cssIdrange?> {
 		/*		display: none; */
-				width: 25px;
+				width: 250px;
 				color: black;
 				border:1px solid #111;
 				text-align: center;
@@ -99,11 +99,14 @@
 	// loop
 	foreach($az as $x){
 		//var_dump $x;
-		echo "\t\t<div id='". $x . "'>".$x;
+		echo "\t\t<div id='". $x . "'>"; //</div>\n";
+		echo "<h1>". $x . "</h1>";
 			foreach($user as $y){
 				//  substr ( string $string , int $start [, int $length ] ) : string
 				if(substr($y['first'], 0, 1) == $x || substr($y['last'], 0, 1) == $x){
+					echo "\n\t<div>\n";
 					echo "\n\t\t".$y['first']." ".$y['last']."<br/>\n";
+					echo "</div>\n";
 				}
 			//var_dump($x);
 			}
