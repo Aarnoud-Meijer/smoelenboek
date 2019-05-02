@@ -91,12 +91,15 @@
 
 		.male, .female{
 			padding:5px;
-/*			opacity: .5;*/
 		}
 
-/*		.on{opacity:1;} */
 		.off{opacity:.5;}
 
+		div#male, div#female {
+			width: 100px;
+			padding:5px;
+			border:1px solid #555;
+		}
 
 /*
 		#checkboxmen:checked ~ * .male {
@@ -114,43 +117,23 @@
 
 		<script type="text/javascript" src="js/jquery.min.js"></script>
 		<script type="text/javascript">
-			$(document).ready(function(){
-			//$(function(){
-			//	console.log( "ready!" );
-
-				//$("#checkboxmen").click()
-				
-				//  $("#buttonwomen").click(function(){
-				// $("#checkboxmen").click(toggleState(".male")); // direct on doc ready
-				
-				$("#checkboxmen").click(function(){
-				// $("#checkboxmen").click(toggleState(".male"));
+			// $(document).ready(function(){
+			$(function(){
+				$("#male").click(function(){
 					toggleState(".male");
-					//$(".male").addClass('on');
 				});
-				
-				$("#checkboxwomen").click(function(){
-				// $("#checkboxmen").click(toggleState(".male"));
-					//console.log( "item" );
+
+				$("#female").click(function(){
 					toggleState(".female");
 				});
 
-				//{
-
-					//$(".woman img").css({"filter":"grayscale(0%)", "border":"5px solid black"});
-				//});
-
 				function toggleState(item){
+					console.log( item );
 					// hasClass
 					if($(item).hasClass("off")){
-						console.log( item );
-					//	item.className="on";
 						$(item).removeClass('off');
-						//$(item).addClass('on');
 					}else{
-						// removeClass() 
 						$(item).addClass('off');
-						//item.removeClass('off');
 					}
 				}
 
@@ -163,9 +146,8 @@
 		  <a href="/index.html" id="back">terug</a>
 		</header>
 
-		<label id="checkboxmen"><input type="checkbox" /> Men </label>
-		<label> </label>
-		<input type="checkbox" id="checkboxwomen" /> women
+		<div id="male"> Men </div>
+		<div id="female"> women </div>
 
 		<ul>
 <?php foreach($az as $x){
