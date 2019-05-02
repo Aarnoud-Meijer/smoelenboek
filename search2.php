@@ -94,6 +94,7 @@
 			opacity: .5;
 		}
 
+/*
 		#checkboxmen:checked ~ * .male {
 			color: blue;
 			opacity: 1;
@@ -103,8 +104,32 @@
 			color: red;
 			opacity: 1;
 		}
+*/
 
 		</style>
+
+		<script type="text/javascript" src="js/jquery.min.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function(){
+			//$(function(){
+			//	console.log( "ready!" );
+
+				//$("#checkboxmen").click()
+				
+				$("#checkboxmen").click(function(){
+					if(item.className == "on"){
+						item.className="off";
+					}else{
+						item.className="on";
+					}
+					//$(".woman img").css({"filter":"grayscale(0%)", "border":"5px solid black"});
+				});
+				//toggleState(item){
+
+				}
+				
+			});
+		</script>
 	</head>
 	<body>
 		<header>
@@ -112,8 +137,9 @@
 		  <a href="/index.html" id="back">terug</a>
 		</header>
 
-		<input type="checkbox" id="checkboxmen" /> Men
-		<input type="checkbox" id="checkboxwomen" /> women
+		<label><input type="checkbox" id="checkboxmen" /> Men </label>
+		<label><input type="checkbox" id="checkboxwomen" /> women </label>
+
 
 		<ul>
 <?php foreach($az as $x){
@@ -126,7 +152,7 @@
 <?php
 	// loop
 	foreach($az as $x){
-		//var_dump $x;
+		// create all boxes
 		echo "\t\t<div id='". $x . "'>"; //</div>\n";
 		echo "<h1>". $x . "</h1>";
 			foreach($user as $y){
@@ -138,7 +164,6 @@
 					echo "</a>";
 					echo "</div>\n";
 				}
-			//var_dump($x);
 			}
 		echo"</div>\n";
 	}
