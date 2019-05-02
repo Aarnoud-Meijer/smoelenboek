@@ -91,8 +91,12 @@
 
 		.male, .female{
 			padding:5px;
-			opacity: .5;
+/*			opacity: .5;*/
 		}
+
+/*		.on{opacity:1;} */
+		.off{opacity:.5;}
+
 
 /*
 		#checkboxmen:checked ~ * .male {
@@ -116,18 +120,40 @@
 
 				//$("#checkboxmen").click()
 				
-				$("#checkboxmen").click(function(){
-					if(item.className == "on"){
-						item.className="off";
-					}else{
-						item.className="on";
-					}
-					//$(".woman img").css({"filter":"grayscale(0%)", "border":"5px solid black"});
-				});
-				//toggleState(item){
-
-				}
+				//  $("#buttonwomen").click(function(){
+				// $("#checkboxmen").click(toggleState(".male")); // direct on doc ready
 				
+				$("#checkboxmen").click(function(){
+				// $("#checkboxmen").click(toggleState(".male"));
+					toggleState(".male");
+					//$(".male").addClass('on');
+				});
+				
+				$("#checkboxwomen").click(function(){
+				// $("#checkboxmen").click(toggleState(".male"));
+					//console.log( "item" );
+					toggleState(".female");
+				});
+
+				//{
+
+					//$(".woman img").css({"filter":"grayscale(0%)", "border":"5px solid black"});
+				//});
+
+				function toggleState(item){
+					// hasClass
+					if($(item).hasClass("off")){
+						console.log( item );
+					//	item.className="on";
+						$(item).removeClass('off');
+						//$(item).addClass('on');
+					}else{
+						// removeClass() 
+						$(item).addClass('off');
+						//item.removeClass('off');
+					}
+				}
+
 			});
 		</script>
 	</head>
@@ -137,9 +163,9 @@
 		  <a href="/index.html" id="back">terug</a>
 		</header>
 
-		<label><input type="checkbox" id="checkboxmen" /> Men </label>
-		<label><input type="checkbox" id="checkboxwomen" /> women </label>
-
+		<label id="checkboxmen"><input type="checkbox" /> Men </label>
+		<label> </label>
+		<input type="checkbox" id="checkboxwomen" /> women
 
 		<ul>
 <?php foreach($az as $x){
@@ -159,7 +185,7 @@
 				//  substr ( string $string , int $start [, int $length ] ) : string
 				if(substr($y['first'], 0, 1) == $x || substr($y['last'], 0, 1) == $x){
 					echo "\n\t<div>\n";
-					echo "<a href='". $y['link'] . "' class='".$y['sex']."'>";
+					echo "<a href='". $y['link'] . "' class='".$y['sex']." off'>";
 					echo "\n\t\t".$y['first']." ".$y['last']."<br/>\n";
 					echo "</a>";
 					echo "</div>\n";
