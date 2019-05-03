@@ -98,6 +98,8 @@
 		div#male, div#female {
 			width: 100px;
 			padding:5px;
+			margin: 0 15px;
+			float:left;
 			border:1px solid #555;
 		}
 
@@ -120,10 +122,12 @@
 			// $(document).ready(function(){
 			$(function(){
 				$("#male").click(function(){
+					toggleState("#male");
 					toggleState(".male");
 				});
 
 				$("#female").click(function(){
+					toggleState("#female");
 					toggleState(".female");
 				});
 
@@ -146,8 +150,8 @@
 		  <a href="/index.html" id="back">terug</a>
 		</header>
 
-		<div id="male"> Men </div>
-		<div id="female"> women </div>
+		<div id="male" class="off"> Men </div>
+		<div id="female" class="off"> women </div>
 
 		<ul>
 <?php foreach($az as $x){
