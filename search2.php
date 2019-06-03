@@ -98,9 +98,19 @@
 		div#male, div#female {
 			width: 100px;
 			padding:5px;
-			margin: 0 15px;
+			margin: 5px 15px;
 			float:left;
 			border:1px solid #555;
+		}
+
+		a#back{
+			float:right;
+			margin:5px 15px;
+		}
+
+		header h1{
+			float:left;
+			margin: 1px 25px;
 		}
 
 /*
